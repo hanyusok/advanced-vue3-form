@@ -6,7 +6,7 @@ export const formConfig = [
     label: "",
     name: "info",
     text: instructions,
-    buttonText: "Apply here",
+    buttonText: "네, 신청합니다",
     options: {
       attrs: {},
     },
@@ -18,8 +18,8 @@ export const formConfig = [
     type: "information",
     label: "",
     name: "info",
-    text: `...being a real-life superhero is not about physical strength, but about <strong>mental strength</strong>.`,
-    buttonText: "Cool, let's do this!",
+    text: `건강보험 적용됩니다.<p class="instructions">본인부담 진료비(0원~6,000원)있습니다. 접수 안내 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z"/></svg><strong>계좌이체(수납)</strong><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z"/></svg>비대면 진료...순서로 진행됩니다</p>`,
+    buttonText: "네, 알겠습니다",
     options: {
       attrs: {},
     },
@@ -29,11 +29,11 @@ export const formConfig = [
   },
   {
     type: "radio",
-    label: "Have you identified your superpowers?",
+    label: "마트의원 진료 받은적 있으신가요?",
     name: "hasSuperpower",
     // buttonText: "What's next",
     options: {
-      choices: ["Yes", "No", "Maybe"],
+      choices: ["네", "아니오", "아마도, 기억 안나요"],
     },
     validation: {
       required: true,

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="title">
-      <h1>Advanced <span> Vue 3 </span> Form</h1>
+      <h1>마트의원 <span> 비대면 </span> 신청</h1>
     </div>
     <VueForm :formConfig="formConfig" />
   </div>

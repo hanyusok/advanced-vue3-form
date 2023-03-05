@@ -153,3 +153,11 @@ See working example in **[InputBox.vue](/src/components/FormElements/Fields/Inpu
 - [ ] TypeScript
 - [ ] CSS Refactoring (Windicss)
 - [ ] XState
+
+
+1. 마트의원 진료 받은적 있으신가요?
+2. 원하는 진료? (감기, 장염, 처방전, 코로나 확진자, 기타)
+3. 간단한 증상 메모?
+4. (환자)이름?
+5. (환자)주민번호?
+6. 핸드폰?
