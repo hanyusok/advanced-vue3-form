@@ -17,11 +17,11 @@ export function useValidation(props) {
    */
   const validationMessage = computed(() => {
     if (props.type === "checkbox") {
-      return `Minimum ${props.validation.minLength} selections required.`;
+      return `최소 ${props.validation.minLength} 이상!`;
     }
-    return `Minimum ${props.validation.minLength} ${
-      props.validation.numeric ? "numbers" : "characters"
-    } required.`;
+    return `최소 ${props.validation.minLength} ${
+      props.validation.numeric ? "숫자" : "자"
+    } 이상!`;
   });
   const rules = computed(() => ({
     /**
@@ -30,7 +30,7 @@ export function useValidation(props) {
      */
     selectedValue: {
       required: props.validation.required
-        ? helpers.withMessage(`This field cannot be empty.`, required)
+        ? helpers.withMessage(`체크해야 넘어갑니다.`, required)
         : false,
       minLength: props.validation.minLength
         ? helpers.withMessage(
@@ -39,10 +39,10 @@ export function useValidation(props) {
           )
         : false,
       email: props.validation.email
-        ? helpers.withMessage("Must be a valid email address.", email)
+        ? helpers.withMessage("이메일 주소!", email)
         : false,
       numeric: props.validation.numeric
-        ? helpers.withMessage("Must use all numbers.", numeric)
+        ? helpers.withMessage("숫자!", numeric)
         : false,
       $autoDirty: true,
     },

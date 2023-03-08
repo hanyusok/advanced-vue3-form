@@ -1,9 +1,11 @@
 <template>
   <TypeBasedTransition :transition-type="'fadeUpDown'">
     <div v-if="isLastField" class="form-complete">
-      <pre> {{ store.formData }} </pre>
+      <!-- <pre> {{ store.formData }} </pre> -->
+      신청되었습니다.
     </div>
   </TypeBasedTransition>
+  
 </template>
 <script setup>
 // Transition - functional component
@@ -22,4 +24,7 @@ defineProps({
  * Pinia
  */
 const store = useLeadStore();
+
+//firebase 전송
+
 </script>

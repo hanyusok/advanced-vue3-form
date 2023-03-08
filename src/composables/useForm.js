@@ -1,6 +1,9 @@
 import { ref, computed } from "vue";
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "@/utilities/firebase";
+import { useLeadStore } from "@/stores/LeadStore";
 
-export function useForm(formLength) {
+export function useForm(formLength) { 
   /**
    * Returned
    * **/
@@ -33,12 +36,24 @@ export function useForm(formLength) {
   /**
    * Returned
    * **/
+
+  const store = useLeadStore();
+
   function onSubmit() {
     if (formState.value.errorLength > 0) {
       validateField(false);
     } else {
       validateField(true);
       next();
+    }
+    //firestore add document
+    if (formState.value.isLastField){
+      try {
+        addDoc(collection(db, "appointments"), store.formData)
+        console.log("Document written")
+      } catch (e) {
+        console.error("Error adding document: ", e)
+      }
     }
   }
 
