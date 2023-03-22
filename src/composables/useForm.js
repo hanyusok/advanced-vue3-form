@@ -7,7 +7,7 @@ export function useForm(formLength) {
   /**
    * Returned
    * **/
-  const formData = ref({});
+  const formData = ref({})
 
   /**
    * Returned
@@ -37,7 +37,7 @@ export function useForm(formLength) {
    * Returned
    * **/
 
-  const store = useLeadStore();
+  const store = useLeadStore()
 
   function onSubmit() {
     if (formState.value.errorLength > 0) {
