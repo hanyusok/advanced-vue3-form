@@ -94,7 +94,7 @@ export const formConfig = [
     buttonText: "다음...",
     options: {
       attrs: {
-        placeholder: "000000-0000000 건강보험조회",
+        placeholder: "000000-0000000",
       },
     },
     validation: {
@@ -132,12 +132,12 @@ export const formConfig = [
   },
   {
     type: "text",
-    label: "핸드폰",
+    label: "핸드폰(-없이)",
     name: "phone",
     buttonText: "여기로 연락주세요!",
     options: {
       attrs: {
-        placeholder: "010-1234-1234",
+        placeholder: "01012345678",
       },
     },
     validation: {

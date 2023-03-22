@@ -46,7 +46,7 @@ export function useForm(formLength) {
       validateField(true);
       next();
     }
-    //firestore add document
+    //firestore add document    
     if (formState.value.isLastField){
       try {
         addDoc(collection(db, "appointments"), store.formData)
