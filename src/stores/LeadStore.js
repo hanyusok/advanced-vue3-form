@@ -1,11 +1,11 @@
 import { defineStore } from "pinia"
-import { Timestamp } from 'firebase/firestore'
+import { serverTimestamp } from 'firebase/firestore'
 
 export const useLeadStore = defineStore({
   id: "lead",
   state: () => ({
     formData: {
-      timestamp: Timestamp.now()
+      createdAt: serverTimestamp()
     }
   })
 })
