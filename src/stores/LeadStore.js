@@ -5,7 +5,11 @@ export const useLeadStore = defineStore({
   id: "lead",
   state: () => ({
     formData: {
-      createdAt: serverTimestamp()
+      createdAt: serverTimestamp(),
+      kakao: "",
+            fee: "",
+            payOk: false,
+            pharmOK: false
     }
   })
 })
